@@ -29,7 +29,6 @@
 ".\objects\stm32f10x_it.o"
 ".\objects\led..o"
 ".\objects\key.o"
-".\objects\buzzer.o"
 ".\objects\sys.o"
 ".\objects\delay.o"
 ".\objects\flash.o"
