@@ -1,5 +1,5 @@
 #ifndef _USART_H
-#define _USART_T
+#define _USART_H
 
 /* 包含C语言库 */
 #include <stdarg.h>

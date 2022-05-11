@@ -5,6 +5,8 @@
 * Presonal Blog: 影风远sinkfarli
 
 * Explain:
+			1. 实现 usart 串口通信
+			2. 实现 OLED 屏幕信息与 usart 电脑端的信息同步
 
 ***********************************************************************************/
 
@@ -13,7 +15,7 @@
 
 
 /**
-*	Function:
+*	Function: usat 电脑端的主程序控制程序
 * 
 */
 void FT1_UARETandOLED(void)

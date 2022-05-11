@@ -34,6 +34,7 @@
 ".\objects\flash.o"
 ".\objects\usart.o"
 ".\objects\rtc.o"
+".\objects\i2c.o"
 ".\objects\function1.o"
 --strict --scatter ".\Objects\SKL-STM32-TemplateProgram.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

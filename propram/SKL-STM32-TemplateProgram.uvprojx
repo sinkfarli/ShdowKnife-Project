@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\CMSIS;.\Lib\inc;.\Lib\src;.\Startup;.\User;.\Basic\sys;.\Hardware\led;.\Basic\delay;.\Hardware\key;.\Basic\flash;.\Basic\usart;.\Basic\rtc;.\Function\function1</IncludePath>
+              <IncludePath>.\CMSIS;.\Lib\inc;.\Lib\src;.\Startup;.\User;.\Basic\sys;.\Hardware\led;.\Basic\delay;.\Hardware\key;.\Basic\flash;.\Basic\usart;.\Basic\rtc;.\Function\function1;.\Basic\i2c</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -580,6 +580,11 @@
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Basic\rtc\rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Basic\i2c\i2c.c</FilePath>
             </File>
           </Files>
         </Group>
