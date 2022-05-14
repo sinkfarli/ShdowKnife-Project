@@ -3,6 +3,8 @@
 
 #include "sys.h"
 
+#include "function1.h"
+
 /* 宏定义 */
 #define I2CPORT GPIOB       	//定义使用 GPIOB 组接口
 #define I2C_SCL GPIO_Pin_6		//定义 SCL 使用 GPIOB_Pin_6
@@ -13,6 +15,11 @@
 
 
 /* drive program */
-
+void I2C_GPIO_Init(void);//i2c接口初始化
+void I2C_Configuration(void);//i2c初始化
+void I2C_SAND_BUFFER(u8 SlaveAddr,u8 WriteAddr,u8* pBuffer,u16 NumByteToWrite);//I2C发送数据串
+void I2C_SAND_BYTE(u8 SlaveAddr,u8 writeAddr,u8 pBuffer);//I2C发送一个字节
+void I2C_READ_BUFFER(u8 SlaveAddr,u8 readAddr,u8* pBuffer,u16 NumByteToRead);//I2C读取数据串
+u8 I2C_READ_BYTE(u8 SlaveAddr,u8 readAddr);//I2C读取一个字节
 
 #endif

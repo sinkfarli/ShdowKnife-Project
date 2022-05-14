@@ -28,7 +28,7 @@
 ".\objects\main.o"
 ".\objects\stm32f10x_it.o"
 ".\objects\led..o"
-".\objects\key.o"
+".\objects\oled_ssd1306.o"
 ".\objects\sys.o"
 ".\objects\delay.o"
 ".\objects\flash.o"

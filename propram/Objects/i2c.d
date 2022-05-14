@@ -30,3 +30,15 @@
 .\objects\i2c.o: .\Lib\inc\stm32f10x_usart.h
 .\objects\i2c.o: .\Lib\inc\stm32f10x_wwdg.h
 .\objects\i2c.o: .\Lib\inc\misc.h
+.\objects\i2c.o: .\Function\function1\function1.h
+.\objects\i2c.o: .\Hardware\led\led.h
+.\objects\i2c.o: .\Basic\delay\delay.h
+.\objects\i2c.o: .\Basic\usart\usart.h
+.\objects\i2c.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\i2c.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\i2c.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\i2c.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\i2c.o: .\Hardware\oled-ssd1306\oled_ssd1306.h
+.\objects\i2c.o: .\Basic\i2c\i2c.h
+.\objects\i2c.o: .\Function\function1\function1.h
+.\objects\i2c.o: .\Hardware\oled-ssd1306\oled_ssd1306.h

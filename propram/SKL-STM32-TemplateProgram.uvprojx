@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\CMSIS;.\Lib\inc;.\Lib\src;.\Startup;.\User;.\Basic\sys;.\Hardware\led;.\Basic\delay;.\Hardware\key;.\Basic\flash;.\Basic\usart;.\Basic\rtc;.\Function\function1;.\Basic\i2c</IncludePath>
+              <IncludePath>.\CMSIS;.\Lib\inc;.\Lib\src;.\Startup;.\User;.\Basic\sys;.\Hardware\led;.\Basic\delay;.\Basic\flash;.\Basic\usart;.\Basic\rtc;.\Function\function1;.\Basic\i2c;.\Hardware\oled-ssd1306</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -547,9 +547,9 @@
               <FilePath>.\Hardware\led\led..c</FilePath>
             </File>
             <File>
-              <FileName>key.c</FileName>
+              <FileName>oled_ssd1306.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardware\key\key.c</FilePath>
+              <FilePath>.\Hardware\oled-ssd1306\oled_ssd1306.c</FilePath>
             </File>
           </Files>
         </Group>

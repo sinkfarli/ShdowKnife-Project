@@ -31,8 +31,14 @@
 .\objects\function1.o: .\Lib\inc\misc.h
 .\objects\function1.o: .\Basic\sys\sys.h
 .\objects\function1.o: .\Hardware\led\led.h
+.\objects\function1.o: .\Basic\delay\delay.h
 .\objects\function1.o: .\Basic\usart\usart.h
 .\objects\function1.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\function1.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\function1.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\function1.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\function1.o: .\Hardware\oled-ssd1306\oled_ssd1306.h
+.\objects\function1.o: .\Basic\i2c\i2c.h
+.\objects\function1.o: .\Function\function1\function1.h
+.\objects\function1.o: .\Hardware\oled-ssd1306\oled_ssd1306.h
+.\objects\function1.o: .\Function\function1\function1.h

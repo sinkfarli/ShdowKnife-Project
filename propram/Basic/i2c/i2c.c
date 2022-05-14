@@ -5,7 +5,7 @@
 * Presonal Blog: 影风远sinkfarli
 
 * Explain:
-
+			1. i2c drive program
 
 ***********************************************************************************/
 
@@ -102,7 +102,7 @@ void I2C_SAND_BYTE(u8 SlaveAddr,u8 writeAddr,u8 pBuffer)
 {
 	/* 产生起始位 */
 	I2C_GenerateSTART(I2C1,ENABLE);
-	while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)); //等待完成	
+	while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)); //等待完成
 	
 	I2C_Send7bitAddress(I2C1,SlaveAddr, I2C_Direction_Transmitter); //发送从器件地址及状态（写入）
 	while(!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)); //等待完成	
@@ -120,7 +120,7 @@ void I2C_SAND_BYTE(u8 SlaveAddr,u8 writeAddr,u8 pBuffer)
 
 
 /**
-* Function：I2C读取数据串（器件地址，寄存器，内部地址，数量）
+* Function：I2C读取数据串
 * Parameter：
 				1. SlaveAddr       	发送的器件地址
 				2. readAddr       	器件的内部寄存器

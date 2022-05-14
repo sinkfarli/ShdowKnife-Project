@@ -25,7 +25,7 @@ void delay_us(u32 us)
 	SysTick->LOAD = AHB_INPUT*us;	//重装计数初值（当主频是72MHz，72次为1微妙）
 	SysTick->VAL = 0x00; //清空定时的计数器
 	SysTick->CTRL = 0x00000005; //时钟源HCLK，打开定时器
-	while(!(SysTick->CTRL&0x000100000)); //等待计数到0
+	while(!(SysTick->CTRL&0x00010000)); //等待计数到0
 	SysTick->CTRL = 0x00000004; //关闭定时器
 }
 
