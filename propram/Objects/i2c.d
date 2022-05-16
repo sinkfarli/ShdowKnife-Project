@@ -41,4 +41,4 @@
 .\objects\i2c.o: .\Hardware\oled-ssd1306\oled_ssd1306.h
 .\objects\i2c.o: .\Basic\i2c\i2c.h
 .\objects\i2c.o: .\Function\function1\function1.h
-.\objects\i2c.o: .\Hardware\oled-ssd1306\oled_ssd1306.h
+.\objects\i2c.o: .\Hardware\servo-pca9685\servo_pca9685.h

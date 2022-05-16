@@ -28,7 +28,12 @@
 .\objects\main.o: .\Lib\inc\stm32f10x_usart.h
 .\objects\main.o: .\Lib\inc\stm32f10x_wwdg.h
 .\objects\main.o: .\Lib\inc\misc.h
+.\objects\main.o: .\Function\function2\function2.h
 .\objects\main.o: .\Basic\sys\sys.h
+.\objects\main.o: .\Basic\delay\delay.h
+.\objects\main.o: .\Hardware\servo-pca9685\servo_pca9685.h
+.\objects\main.o: .\Basic\i2c\i2c.h
+.\objects\main.o: .\Function\function1\function1.h
 .\objects\main.o: .\Hardware\led\led.h
 .\objects\main.o: .\Basic\usart\usart.h
 .\objects\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
@@ -38,6 +43,4 @@
 .\objects\main.o: .\Hardware\oled-ssd1306\oled_ssd1306.h
 .\objects\main.o: .\Basic\i2c\i2c.h
 .\objects\main.o: .\Function\function1\function1.h
-.\objects\main.o: .\Basic\delay\delay.h
-.\objects\main.o: .\Hardware\oled-ssd1306\oled_ssd1306.h
-.\objects\main.o: .\Function\function1\function1.h
+.\objects\main.o: .\Hardware\servo-pca9685\servo_pca9685.h

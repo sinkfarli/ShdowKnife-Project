@@ -29,6 +29,7 @@
 ".\objects\stm32f10x_it.o"
 ".\objects\led..o"
 ".\objects\oled_ssd1306.o"
+".\objects\servo_pca9685.o"
 ".\objects\sys.o"
 ".\objects\delay.o"
 ".\objects\flash.o"
@@ -36,6 +37,7 @@
 ".\objects\rtc.o"
 ".\objects\i2c.o"
 ".\objects\function1.o"
+".\objects\function2.o"
 --strict --scatter ".\Objects\SKL-STM32-TemplateProgram.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

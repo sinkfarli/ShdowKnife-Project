@@ -40,5 +40,6 @@
 .\objects\oled_ssd1306.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\oled_ssd1306.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\oled_ssd1306.o: .\Hardware\oled-ssd1306\oled_ssd1306.h
-.\objects\oled_ssd1306.o: .\Function\function1\function1.h
+.\objects\oled_ssd1306.o: .\Hardware\servo-pca9685\servo_pca9685.h
+.\objects\oled_ssd1306.o: .\Basic\i2c\i2c.h
 .\objects\oled_ssd1306.o: Hardware\oled-ssd1306\ASCII_8x16.h

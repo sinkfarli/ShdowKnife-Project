@@ -25,6 +25,10 @@ void Text(void)
 	delay_us(50000); //延时1秒
 	GPIO_WriteBit(LEDPORT,LED1,(BitAction)(0)); //LED1接口输出低电平0
 	delay_us(100000); //延时1秒	
+		GPIO_WriteBit(LEDPORT,LED1,(BitAction)(1)); //LED1接口输出高电平1
+	delay_us(50000); //延时1秒
+	GPIO_WriteBit(LEDPORT,LED1,(BitAction)(0)); //LED1接口输出低电平0
+	delay_us(100000); //延时1秒	
 }
 
 

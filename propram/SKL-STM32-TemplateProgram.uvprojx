@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\CMSIS;.\Lib\inc;.\Lib\src;.\Startup;.\User;.\Basic\sys;.\Hardware\led;.\Basic\delay;.\Basic\flash;.\Basic\usart;.\Basic\rtc;.\Function\function1;.\Basic\i2c;.\Hardware\oled-ssd1306</IncludePath>
+              <IncludePath>.\CMSIS;.\Lib\inc;.\Lib\src;.\Startup;.\User;.\Basic\sys;.\Hardware\led;.\Basic\delay;.\Basic\flash;.\Basic\usart;.\Basic\rtc;.\Function\function1;.\Basic\i2c;.\Hardware\oled-ssd1306;.\Hardware\servo-pca9685;.\Function\function2</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -551,6 +551,11 @@
               <FileType>1</FileType>
               <FilePath>.\Hardware\oled-ssd1306\oled_ssd1306.c</FilePath>
             </File>
+            <File>
+              <FileName>servo_pca9685.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\servo-pca9685\servo_pca9685.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -595,6 +600,11 @@
               <FileName>function1.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Function\function1\function1.c</FilePath>
+            </File>
+            <File>
+              <FileName>function2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Function\function2\function2.c</FilePath>
             </File>
           </Files>
         </Group>

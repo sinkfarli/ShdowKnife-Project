@@ -58,7 +58,7 @@ void OLEDSSD1306_Init(void)
 **/
 void OLED_Display_on(void)
 {
-	I2C_SAND_BYTE(OLEDSSD1306_Add,COM,command[27]);
+	I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,command[27]);
 }
 
 
@@ -68,7 +68,7 @@ void OLED_Display_on(void)
 **/
 void OLED_Display_off(void)
 {
-	I2C_SAND_BYTE(OLEDSSD1306_Add,COM,command[0]);
+	I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,command[0]);
 }
 
 
@@ -80,8 +80,8 @@ void OLED_Display_off(void)
 **/
 void OLED_Display_luminance(u8 x)
 {
-	I2C_SAND_BYTE(OLEDSSD1306_Add,COM,command[17]);
-	I2C_SAND_BYTE(OLEDSSD1306_Add,COM,x);	
+	I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,command[17]);
+	I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,x);	
 }
 
 
@@ -95,14 +95,14 @@ void OLED_Display_clear(void)
 	
 	for(t = 0xB0;t < 0xB8;t++)//设置起始页地址为0xB0
 	{
-		I2C_SAND_BYTE(OLEDSSD1306_Add,COM,t);//页地址（从0xB0到0xB7）
-		I2C_SAND_BYTE(OLEDSSD1306_Add,COM,0x10); //起始列地址的高4位
-		I2C_SAND_BYTE(OLEDSSD1306_Add,COM,0x00);//起始列地址的低4位
-	
+		I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,t);//页地址（从0xB0到0xB7）
+		I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,0x10); //起始列地址的高4位
+		I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,0x00);//起始列地址的低4位
+		
 		/* 整页内容填充 */
 		for(j=0;j<128;j++)
 		{	
- 			I2C_SAND_BYTE(OLEDSSD1306_Add,DAT,0x00);
+ 			I2C1_SAND_BYTE(OLEDSSD1306_Add,DAT,0x00);
  		}
 	}
 }
@@ -123,14 +123,14 @@ void OLED_Display_8x16(u8 x, u8 y, u16 w)
 	
 	for(t=0;t<2;t++)
 	{
-		I2C_SAND_BYTE(OLEDSSD1306_Add,COM,0xb0+x); //页地址（从0xB0到0xB7）
-		I2C_SAND_BYTE(OLEDSSD1306_Add,COM,y/16+0x10); //起始列地址的高4位
-		I2C_SAND_BYTE(OLEDSSD1306_Add,COM,y%16);	//起始列地址的低4位
+		I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,0xb0+x); //页地址（从0xB0到0xB7）
+		I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,y/16+0x10); //起始列地址的高4位
+		I2C1_SAND_BYTE(OLEDSSD1306_Add,COM,y%16);	//起始列地址的低4位
 		
 		/* 整页内容填充 */
 		for(j=0;j<8;j++)
 		{ 
- 			I2C_SAND_BYTE(OLEDSSD1306_Add,DAT,ASCII_8x16[(w*16)+c-512]);//为了和ASII表对应要减512
+ 			I2C1_SAND_BYTE(OLEDSSD1306_Add,DAT,ASCII_8x16[(w*16)+c-512]);//为了和ASII表对应要减512
 			c++;
 		}
 		
