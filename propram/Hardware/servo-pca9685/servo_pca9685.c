@@ -22,21 +22,22 @@
 */
 void setPWMFreq(float freq)
 {
+	u8 prescale,oldmode,newmode;
   freq *= 0.9;
   float prescaleval = 25000000;
   prescaleval /= 4096;
   prescaleval /= freq;
   prescaleval -= 1;
 	
-	u8 prescale = floor(prescaleval + 0.5);
-	u8 oldmode = I2C2_READ_BYTE(PCA9685_ADDR,PCA9685_MODE1);
-  u8 newmode = (oldmode&0x7F) | 0x10; // sleep
+	prescale = floor(prescaleval + 0.5);
+	oldmode = I2C1_READ_BYTE(PCA9685_ADDR,PCA9685_MODE1);
+  newmode = (oldmode&0x7F) | 0x10; // sleep
 	
-  I2C2_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, newmode); // go to sleep
-  I2C2_SAND_BYTE(PCA9685_ADDR,PCA9685_PRESCALE, prescale); // set the prescaler
-  I2C2_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, oldmode);
+  I2C1_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, newmode); // go to sleep
+  I2C1_SAND_BYTE(PCA9685_ADDR,PCA9685_PRESCALE, prescale); // set the prescaler
+  I2C1_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, oldmode);
 	delay_s(1);
-  I2C2_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, oldmode | 0xa1);
+  I2C1_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, oldmode | 0xa1);
 }
 
 
@@ -53,9 +54,9 @@ void setPWMFreq(float freq)
 */
 void setPWM(u8 num, u16 on, u16 off)
 {
-	I2C2_SAND_BYTE(PCA9685_ADDR,LED0_ON_L*num,on);
-	I2C2_SAND_BYTE(PCA9685_ADDR,LED0_ON_H*num,on>>8);
-	I2C2_SAND_BYTE(PCA9685_ADDR,LED0_OFF_L*num,off);
-	I2C2_SAND_BYTE(PCA9685_ADDR,LED0_OFF_H*num,off>>8);	
+	I2C1_SAND_BYTE(PCA9685_ADDR,LED0_ON_L*num,on);
+	I2C1_SAND_BYTE(PCA9685_ADDR,LED0_ON_H*num,on>>8);
+	I2C1_SAND_BYTE(PCA9685_ADDR,LED0_OFF_L*num,off);
+	I2C1_SAND_BYTE(PCA9685_ADDR,LED0_OFF_H*num,off>>8);	
 }
 

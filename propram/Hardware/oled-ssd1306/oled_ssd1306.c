@@ -48,7 +48,7 @@ void OLEDSSD1306_Init(void)
 {
 	OLED_Display_off();//OLED关闭屏幕
 	OLED_Display_clear();//OLED清空屏幕	
-	OLED_Display_on();Text();//OLED打开屏幕	
+	OLED_Display_on();//OLED打开屏幕	
 }
 
 

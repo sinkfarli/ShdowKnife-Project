@@ -244,7 +244,7 @@ void I2C2_SAND_BUFFER(u8 SlaveAddr,u8 WriteAddr,u8* pBuffer,u16 NumByteToWrite)
 	while(!I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTED));//等待完成
 	
 	while(NumByteToWrite--){ //循环发送数据	
-		I2C_SendData(I2C1,*pBuffer); //发送数据
+		I2C_SendData(I2C2,*pBuffer); //发送数据
 		pBuffer++; //数据指针移位
 		while (!I2C_CheckEvent(I2C2,I2C_EVENT_MASTER_BYTE_TRANSMITTED));//等待完成
 	}
