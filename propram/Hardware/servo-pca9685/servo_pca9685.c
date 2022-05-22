@@ -14,6 +14,26 @@
 #include "servo_pca9685.h"
 #include "math.h"
 
+/**
+*	Function：舵机初始化
+**/
+void PCA9685_Init(void)
+{
+	PCA9685_Reset();
+	Text();
+	setPWMFreq(330);//330hz
+}
+
+
+
+/**
+* Function：pca9685 计数器清零
+**/
+void PCA9685_Reset(void)
+{
+  I2C2_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, 0x00);//舵机寄存器清零
+}
+
 
 /**
 *	Function: 设置PWM频率
@@ -30,14 +50,14 @@ void setPWMFreq(float freq)
   prescaleval -= 1;
 	
 	prescale = floor(prescaleval + 0.5);
-	oldmode = I2C1_READ_BYTE(PCA9685_ADDR,PCA9685_MODE1);
+	oldmode = I2C2_READ_BYTE(PCA9685_ADDR,PCA9685_MODE1);
   newmode = (oldmode&0x7F) | 0x10; // sleep
 	
-  I2C1_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, newmode); // go to sleep
-  I2C1_SAND_BYTE(PCA9685_ADDR,PCA9685_PRESCALE, prescale); // set the prescaler
-  I2C1_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, oldmode);
+  I2C2_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, newmode); // go to sleep
+  I2C2_SAND_BYTE(PCA9685_ADDR,PCA9685_PRESCALE, prescale); // set the prescaler
+  I2C2_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, oldmode);
 	delay_s(1);
-  I2C1_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, oldmode | 0xa1);
+  I2C2_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, oldmode | 0xa1);
 }
 
 
@@ -54,9 +74,9 @@ void setPWMFreq(float freq)
 */
 void setPWM(u8 num, u16 on, u16 off)
 {
-	I2C1_SAND_BYTE(PCA9685_ADDR,LED0_ON_L*num,on);
-	I2C1_SAND_BYTE(PCA9685_ADDR,LED0_ON_H*num,on>>8);
-	I2C1_SAND_BYTE(PCA9685_ADDR,LED0_OFF_L*num,off);
-	I2C1_SAND_BYTE(PCA9685_ADDR,LED0_OFF_H*num,off>>8);	
+	I2C2_SAND_BYTE(PCA9685_ADDR,LED0_ON_L+4*num,on);
+	I2C2_SAND_BYTE(PCA9685_ADDR,LED0_ON_H+4*num,on>>8);
+	I2C2_SAND_BYTE(PCA9685_ADDR,LED0_OFF_L+4*num,off);
+	I2C2_SAND_BYTE(PCA9685_ADDR,LED0_OFF_H+4*num,off>>8);	
 }
 

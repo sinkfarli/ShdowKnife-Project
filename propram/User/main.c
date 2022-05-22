@@ -11,6 +11,7 @@
 
 int main (void)
 {	
+	
 	/* 初始部分 */
 	RCC_Configuration();
 	LED_Init();
@@ -18,8 +19,8 @@ int main (void)
 	I2C_Configuration();//i2c初始	
 	OLEDSSD1306_Init();//OLED初始化	
 	OLED_Display_luminance(255);//OLED亮度设置（0~255）
-	
-//  I2C1_SAND_BYTE(PCA9685_ADDR,PCA9685_MODE1, 0x00);//舵机寄存器清零
+	PCA9685_Init();
+
 
 
 	
@@ -36,10 +37,13 @@ int main (void)
 //						未执行FT1_UARETandOLED()函数，即if(USART1_RX_STA&0xC000)标志判断未失败；
 //	
 //	*/
-//	
-//	setPWM(0,0,500);
+
+
+
 	while(1)
 	{
+	setPWM(4,0,2048);
+	delay_s(10);
 		FT1_UARETandOLED();
 		
 	}

@@ -6,9 +6,11 @@
 #include "delay.h"
 #include "led.h"
 
+#include "function1.h"
+
 
 /* 宏定义 */
-#define PCA9685_ADDR	0x40		//I2C总线地址
+#define PCA9685_ADDR	0x80		//I2C总线地址
 #define PCA9685_SUBADR1 0x02	//I2C总线子地址1
 #define PCA9685_SUBADR2 0x03	//I2C总线子地址2
 #define PCA9685_SUBADR3 0x04	//I2C总线子地址3
@@ -28,6 +30,8 @@
 
 
 /* 驱动函数的封装 */
+void PCA9685_Init(void);//舵机初始化
+void PCA9685_Reset(void);//pca9685 计数器清零
 void setPWMFreq(float freq);//设置PWM频率
 void setPWM(u8 num, u16 on, u16 off);//写入PWM
 
