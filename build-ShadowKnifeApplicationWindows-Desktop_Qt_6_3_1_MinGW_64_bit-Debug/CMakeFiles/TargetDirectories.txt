@@ -1,5 +1,0 @@
-C:/Users/Administrator/Desktop/ShdowKnife-Project/build-ShadowKnifeApplicationWindows-Desktop_Qt_6_3_1_MinGW_64_bit-Debug/CMakeFiles/ShadowKnifeApplicationWindows.dir
-C:/Users/Administrator/Desktop/ShdowKnife-Project/build-ShadowKnifeApplicationWindows-Desktop_Qt_6_3_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-C:/Users/Administrator/Desktop/ShdowKnife-Project/build-ShadowKnifeApplicationWindows-Desktop_Qt_6_3_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Administrator/Desktop/ShdowKnife-Project/build-ShadowKnifeApplicationWindows-Desktop_Qt_6_3_1_MinGW_64_bit-Debug/CMakeFiles/ShadowKnifeApplicationWindows_autogen_timestamp_deps.dir
-C:/Users/Administrator/Desktop/ShdowKnife-Project/build-ShadowKnifeApplicationWindows-Desktop_Qt_6_3_1_MinGW_64_bit-Debug/CMakeFiles/ShadowKnifeApplicationWindows_autogen.dir
