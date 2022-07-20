@@ -104,6 +104,8 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug/qrc_Image.cpp
 debug/qrc_Image.cpp: ../Shadowknife/Image.qrc \
 		D:/Qt/6.3.1/mingw_64/bin/rcc.exe \
+		../Shadowknife/Image/LoginInterfare/reduce.png \
+		../Shadowknife/Image/LoginInterfare/close.png \
 		../Shadowknife/Image/LoginInterfare/logo.png
 	'D:\Qt\6.3.1\mingw_64\bin\rcc.exe' -name Image ../Shadowknife/Image.qrc -o debug/qrc_Image.cpp
 
@@ -592,7 +594,16 @@ debug/logininterface.o: ../Shadowknife/logininterface.cpp ../Shadowknife/loginin
 		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qlabel.h \
 		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qframe.h \
 		D:/Qt/6.3.1/mingw_64/include/QtGui/qpicture.h \
-		D:/Qt/6.3.1/mingw_64/include/QtGui/qtextdocument.h
+		D:/Qt/6.3.1/mingw_64/include/QtGui/qtextdocument.h \
+		D:/Qt/6.3.1/mingw_64/include/QtWidgets/QLineEdit \
+		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qlineedit.h \
+		D:/Qt/6.3.1/mingw_64/include/QtGui/qtextcursor.h \
+		D:/Qt/6.3.1/mingw_64/include/QtGui/qtextformat.h \
+		D:/Qt/6.3.1/mingw_64/include/QtGui/qpen.h \
+		D:/Qt/6.3.1/mingw_64/include/QtGui/qtextoption.h \
+		D:/Qt/6.3.1/mingw_64/include/QtWidgets/QPushButton \
+		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qpushbutton.h \
+		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/logininterface.o ../Shadowknife/logininterface.cpp
 
 debug/qrc_Image.o: debug/qrc_Image.cpp 

@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/LoginInterfare">
         <file>Image/LoginInterfare/logo.png</file>
+        <file>Image/LoginInterfare/reduce.png</file>
+        <file>Image/LoginInterfare/close.png</file>
     </qresource>
 </RCC>

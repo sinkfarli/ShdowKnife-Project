@@ -35,7 +35,7 @@ public:
         LoginInterface->resize(350, 400);
         widget = new QWidget(LoginInterface);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(60, 40, 250, 350));
+        widget->setGeometry(QRect(60, 30, 250, 350));
         widget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         logo = new QLabel(widget);
         logo->setObjectName(QString::fromUtf8("logo"));
@@ -56,9 +56,13 @@ public:
         Close = new QPushButton(widget);
         Close->setObjectName(QString::fromUtf8("Close"));
         Close->setGeometry(QRect(230, 0, 20, 20));
+        Close->setStyleSheet(QString::fromUtf8(""));
+        Close->setFlat(false);
         Reduce = new QPushButton(widget);
         Reduce->setObjectName(QString::fromUtf8("Reduce"));
         Reduce->setGeometry(QRect(210, 0, 20, 20));
+        Reduce->setStyleSheet(QString::fromUtf8("image: url(:/LoginInterfare/Image/LoginInterfare/reduce.png);"));
+        Reduce->setFlat(false);
 
         retranslateUi(LoginInterface);
 
@@ -70,8 +74,8 @@ public:
         LoginInterface->setWindowTitle(QCoreApplication::translate("LoginInterface", "LoginInterface", nullptr));
         logo->setText(QString());
         ShadowknifeSystem->setText(QCoreApplication::translate("LoginInterface", "Shadowknife System", nullptr));
-        Close->setText(QCoreApplication::translate("LoginInterface", "PushButton", nullptr));
-        Reduce->setText(QCoreApplication::translate("LoginInterface", "PushButton", nullptr));
+        Close->setText(QString());
+        Reduce->setText(QString());
     } // retranslateUi
 
 };
