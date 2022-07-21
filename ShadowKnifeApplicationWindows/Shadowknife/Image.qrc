@@ -3,5 +3,7 @@
         <file>Image/LoginInterfare/logo.png</file>
         <file>Image/LoginInterfare/reduce.png</file>
         <file>Image/LoginInterfare/close.png</file>
+        <file>Image/LoginInterfare/PresswordEdit.png</file>
+        <file>Image/LoginInterfare/UserEdit.png</file>
     </qresource>
 </RCC>
