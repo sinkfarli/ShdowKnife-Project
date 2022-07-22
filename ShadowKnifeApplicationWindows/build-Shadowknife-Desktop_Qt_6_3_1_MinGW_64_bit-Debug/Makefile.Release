@@ -104,11 +104,15 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release/qrc_Image.cpp
 release/qrc_Image.cpp: ../Shadowknife/Image.qrc \
 		D:/Qt/6.3.1/mingw_64/bin/rcc.exe \
+		../Shadowknife/Image/LoginInterfare/3.jpg \
 		../Shadowknife/Image/LoginInterfare/reduce.png \
-		../Shadowknife/Image/LoginInterfare/close.png \
+		../Shadowknife/Image/LoginInterfare/2.jpg \
 		../Shadowknife/Image/LoginInterfare/logo.png \
 		../Shadowknife/Image/LoginInterfare/PresswordEdit.png \
-		../Shadowknife/Image/LoginInterfare/UserEdit.png
+		../Shadowknife/Image/LoginInterfare/1.jpg \
+		../Shadowknife/Image/LoginInterfare/close.png \
+		../Shadowknife/Image/LoginInterfare/UserEdit.png \
+		../Shadowknife/Image/LoginInterfare/4.jpg
 	'D:\Qt\6.3.1\mingw_64\bin\rcc.exe' -name Image ../Shadowknife/Image.qrc -o release/qrc_Image.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
@@ -592,6 +596,9 @@ release/logininterface.o: ../Shadowknife/logininterface.cpp ../Shadowknife/login
 		D:/Qt/6.3.1/mingw_64/include/QtGui/qinputmethod.h \
 		D:/Qt/6.3.1/mingw_64/include/QtCore/qlocale.h \
 		D:/Qt/6.3.1/mingw_64/include/QtGui/qguiapplication_platform.h \
+		D:/Qt/6.3.1/mingw_64/include/QtWidgets/QCheckBox \
+		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qcheckbox.h \
+		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qabstractbutton.h \
 		D:/Qt/6.3.1/mingw_64/include/QtWidgets/QLabel \
 		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qlabel.h \
 		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qframe.h \
@@ -604,8 +611,7 @@ release/logininterface.o: ../Shadowknife/logininterface.cpp ../Shadowknife/login
 		D:/Qt/6.3.1/mingw_64/include/QtGui/qpen.h \
 		D:/Qt/6.3.1/mingw_64/include/QtGui/qtextoption.h \
 		D:/Qt/6.3.1/mingw_64/include/QtWidgets/QPushButton \
-		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qpushbutton.h \
-		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qabstractbutton.h
+		D:/Qt/6.3.1/mingw_64/include/QtWidgets/qpushbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/logininterface.o ../Shadowknife/logininterface.cpp
 
 release/qrc_Image.o: release/qrc_Image.cpp 

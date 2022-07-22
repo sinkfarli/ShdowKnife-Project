@@ -5,5 +5,9 @@
         <file>Image/LoginInterfare/close.png</file>
         <file>Image/LoginInterfare/PresswordEdit.png</file>
         <file>Image/LoginInterfare/UserEdit.png</file>
+        <file>Image/LoginInterfare/1.jpg</file>
+        <file>Image/LoginInterfare/2.jpg</file>
+        <file>Image/LoginInterfare/3.jpg</file>
+        <file>Image/LoginInterfare/4.jpg</file>
     </qresource>
 </RCC>
