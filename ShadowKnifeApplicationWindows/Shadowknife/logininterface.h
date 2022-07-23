@@ -15,6 +15,11 @@ public:
     LoginInterface(QWidget *parent = nullptr);
     ~LoginInterface();
 
+private slots:
+    void on_CloseButton_released();
+
+    void on_LoginButton_clicked();
+
 private:
     Ui::LoginInterface *ui;
 };
