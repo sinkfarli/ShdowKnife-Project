@@ -1,6 +1,8 @@
 #include "logininterface.h"
 #include "ui_logininterface.h"
 #include "maininterface.h"
+#include "calculator.h"
+#include "QMessageBox"
 #include <QDebug>
 
 LoginInterface::LoginInterface(QWidget *parent)
@@ -22,30 +24,36 @@ LoginInterface::~LoginInterface()
     delete ui;
 }
 
-
-void LoginInterface::on_CloseButton_released()
+void LoginInterface::on_CloseBtn_clicked()
 {
     close();
 }
 
 
-void LoginInterface::on_LoginButton_clicked()
+void LoginInterface::on_LoginBtn_clicked()
 {
     QString UsreName = ui->UserEdit->text();
     QString Pressword = ui->PresswordEdit->text();
 
     this->close();
 
-    MainInterface *MI = new MainInterface;
+    /*MainInterface *MI = new MainInterface;
     MI->setGeometry(this->geometry());
-    MI->show();
+    MI->show();*/
+
+    Calculator *Cal = new Calculator;
+    Cal->setGeometry(this->geometry());
+    Cal->show();
     if(UsreName == "root" && Pressword == "1234")
     {
 
     }
     else
     {
-        qDebug() << "账号或密码错误";
+        QMessageBox msgBox;
+        msgBox.setText("账号或密码错误，请重新输入！");
+        msgBox.exec();
+
     }
 }
 

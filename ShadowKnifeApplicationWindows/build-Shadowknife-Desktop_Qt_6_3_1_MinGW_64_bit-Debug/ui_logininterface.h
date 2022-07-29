@@ -10,11 +10,12 @@
 #define UI_LOGININTERFACE_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,230 +23,149 @@ QT_BEGIN_NAMESPACE
 class Ui_LoginInterface
 {
 public:
+    QVBoxLayout *verticalLayout;
+    QWidget *Background;
+    QVBoxLayout *verticalLayout_2;
     QWidget *widget;
-    QLabel *label;
-    QLabel *label_2;
-    QLabel *label_3;
-    QLineEdit *UserEdit;
+    QVBoxLayout *verticalLayout_4;
+    QWidget *widget_2;
     QLineEdit *PresswordEdit;
-    QPushButton *LoginButton;
-    QLabel *Hintlabel;
-    QWidget *horizontalLayoutWidget;
-    QHBoxLayout *horizontalLayout;
-    QPushButton *LoginWayButton1;
-    QPushButton *LoginWayButton2;
-    QPushButton *LoginWayButton3;
-    QPushButton *LoginWayButton4;
-    QLabel *Logolabel;
-    QPushButton *CloseButton;
-    QLabel *Namelabel;
+    QLabel *Text;
+    QLineEdit *UserEdit;
+    QPushButton *LoginBtn;
+    QLabel *Logo;
+    QLabel *label;
+    QPushButton *CloseBtn;
 
     void setupUi(QWidget *LoginInterface)
     {
         if (LoginInterface->objectName().isEmpty())
             LoginInterface->setObjectName(QString::fromUtf8("LoginInterface"));
         LoginInterface->resize(300, 420);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/LoginInterfare/Image/LoginInterfare/logo.png"), QSize(), QIcon::Normal, QIcon::Off);
+        LoginInterface->setWindowIcon(icon);
         LoginInterface->setStyleSheet(QString::fromUtf8(""));
-        widget = new QWidget(LoginInterface);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(0, 0, 300, 420));
-        widget->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
-"background-color:rgba(0,0,0,0);"));
-        label = new QLabel(widget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(0, 0, 300, 420));
-        label->setStyleSheet(QString::fromUtf8("border-image: url(:/LoginInterfare/Image/LoginInterfare/1.jpg);\n"
-"border-radius:20px;\n"
-""));
-        label_2 = new QLabel(widget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(10, 30, 280, 390));
+        verticalLayout = new QVBoxLayout(LoginInterface);
+        verticalLayout->setSpacing(0);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        Background = new QWidget(LoginInterface);
+        Background->setObjectName(QString::fromUtf8("Background"));
         QFont font;
-        font.setPointSize(15);
-        label_2->setFont(font);
-        label_2->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,100);\n"
-"border-radius:15px;"));
-        label_3 = new QLabel(widget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(-350, -90, 230, 40));
-        QFont font1;
-        font1.setPointSize(16);
-        font1.setBold(true);
-        label_3->setFont(font1);
-        label_3->setStyleSheet(QString::fromUtf8("color:rgba(255,255,255,210);"));
-        label_3->setAlignment(Qt::AlignCenter);
-        UserEdit = new QLineEdit(widget);
-        UserEdit->setObjectName(QString::fromUtf8("UserEdit"));
-        UserEdit->setGeometry(QRect(50, 135, 201, 40));
-        QFont font2;
-        font2.setPointSize(10);
-        UserEdit->setFont(font2);
-        UserEdit->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);\n"
-"border:none;\n"
-"border-bottom:2px solid rgba(255,255,255,255);\n"
-"color:rgba(255,255,255,230);\n"
-"padding- bottom:7px;"));
-        PresswordEdit = new QLineEdit(widget);
+        font.setBold(true);
+        Background->setFont(font);
+        Background->setStyleSheet(QString::fromUtf8("#Background{\n"
+"	border-image: url(:/LoginInterfare/Image/LoginInterfare/1.jpg);\n"
+"	border-radius:10px;\n"
+"}\n"
+"#widget{\n"
+"	border-radius:10px;\n"
+"	background-color: rgba(0, 0, 0, 100);\n"
+"}\n"
+"#CloseBtn{\n"
+"	border:none;\n"
+"}\n"
+"#Logo{\n"
+"	border-image: url(:/LoginInterfare/Image/LoginInterfare/logo.png);\n"
+"	border-radius:10px;\n"
+"}\n"
+"#label,#Text{\n"
+"	color: rgb(255, 255, 255);\n"
+"}\n"
+"#UserEdit,#PresswordEdit{\n"
+"	background-color:rgba(0,0,0,0);\n"
+"	border:none;\n"
+"	border-bottom:2px solid rgba(255,255,255,255);\n"
+"	color:rgba(255,255,255,230);\n"
+"	padding- bottom:7px;\n"
+"}"));
+        verticalLayout_2 = new QVBoxLayout(Background);
+        verticalLayout_2->setSpacing(0);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        widget = new QWidget(Background);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        verticalLayout_4 = new QVBoxLayout(widget);
+        verticalLayout_4->setSpacing(0);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
+        widget_2 = new QWidget(widget);
+        widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        PresswordEdit = new QLineEdit(widget_2);
         PresswordEdit->setObjectName(QString::fromUtf8("PresswordEdit"));
-        PresswordEdit->setGeometry(QRect(50, 200, 200, 40));
-        PresswordEdit->setFont(font2);
-        PresswordEdit->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);\n"
-"border:none;\n"
-"border-bottom:2px solid rgba(255,255,255,255);\n"
-"color:rgba(255,255,255,230);\n"
-"padding- bottom:7px;"));
+        PresswordEdit->setGeometry(QRect(30, 200, 240, 50));
+        PresswordEdit->setMinimumSize(QSize(240, 50));
         PresswordEdit->setEchoMode(QLineEdit::Password);
-        LoginButton = new QPushButton(widget);
-        LoginButton->setObjectName(QString::fromUtf8("LoginButton"));
-        LoginButton->setGeometry(QRect(50, 275, 200, 40));
+        Text = new QLabel(widget_2);
+        Text->setObjectName(QString::fromUtf8("Text"));
+        Text->setGeometry(QRect(60, 340, 170, 16));
+        Text->setMinimumSize(QSize(170, 0));
+        Text->setMaximumSize(QSize(16777215, 22));
+        QFont font1;
+        font1.setPointSize(9);
+        font1.setBold(false);
+        Text->setFont(font1);
+        Text->setAlignment(Qt::AlignCenter);
+        UserEdit = new QLineEdit(widget_2);
+        UserEdit->setObjectName(QString::fromUtf8("UserEdit"));
+        UserEdit->setGeometry(QRect(30, 140, 240, 50));
+        UserEdit->setMinimumSize(QSize(240, 50));
+        LoginBtn = new QPushButton(widget_2);
+        LoginBtn->setObjectName(QString::fromUtf8("LoginBtn"));
+        LoginBtn->setGeometry(QRect(35, 270, 230, 50));
+        LoginBtn->setMinimumSize(QSize(225, 50));
+        LoginBtn->setMaximumSize(QSize(16777215, 16777215));
+        QFont font2;
+        font2.setPointSize(17);
+        LoginBtn->setFont(font2);
+        LoginBtn->setStyleSheet(QString::fromUtf8("#LoginBtn{\n"
+" background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(20, 47, 78, 219), stop:1 rgba(85, 98, 112, 226));\n"
+" color:rgba(255,255,255,210);\n"
+" border-radius:5px;\n"
+"}#LoginBtn:hover{\n"
+" background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));\n"
+"}\n"
+"#LoginBtn:pressed{\n"
+" padding-left:5px;\n"
+" padding-top:5px;\n"
+" background-color:rgba(105,118,132,200);\n"
+"}"));
+        Logo = new QLabel(widget_2);
+        Logo->setObjectName(QString::fromUtf8("Logo"));
+        Logo->setGeometry(QRect(130, 20, 40, 40));
+        Logo->setMinimumSize(QSize(40, 40));
+        Logo->setMaximumSize(QSize(16777215, 0));
+        Logo->setStyleSheet(QString::fromUtf8(""));
+        Logo->setAlignment(Qt::AlignCenter);
+        label = new QLabel(widget_2);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(0, 90, 300, 50));
+        label->setMinimumSize(QSize(0, 50));
+        label->setMaximumSize(QSize(16777215, 24));
         QFont font3;
-        font3.setPointSize(12);
+        font3.setPointSize(20);
         font3.setBold(true);
-        LoginButton->setFont(font3);
-        LoginButton->setStyleSheet(QString::fromUtf8("QPushButton#LoginButton{\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(20, 47, 78, 219), stop:1 rgba(85, 98, 112, 226));\n"
-"	color:rgba(255,255,255,210);\n"
-"	border-radius:5px;\n"
-"}\n"
-"QPushButto#LoginButton:hover{\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));\n"
-"}\n"
-"QPushButton#LoginButton:pressed{\n"
-"	padding-left:5px;\n"
-"	padding-top:5px;\n"
-"	background-color:rgba(105,118,132,200);\n"
-"}"));
-        Hintlabel = new QLabel(widget);
-        Hintlabel->setObjectName(QString::fromUtf8("Hintlabel"));
-        Hintlabel->setGeometry(QRect(30, 330, 240, 20));
-        Hintlabel->setStyleSheet(QString::fromUtf8("color:rgba(255,255,255,140);\n"
-""));
-        Hintlabel->setAlignment(Qt::AlignCenter);
-        horizontalLayoutWidget = new QWidget(widget);
-        horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(70, 370, 160, 31));
-        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
-        horizontalLayout->setSpacing(0);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        LoginWayButton1 = new QPushButton(horizontalLayoutWidget);
-        LoginWayButton1->setObjectName(QString::fromUtf8("LoginWayButton1"));
-        LoginWayButton1->setMaximumSize(QSize(30, 30));
-        QFont font4;
-        font4.setFamilies({QString::fromUtf8("Social Media Circled")});
-        font4.setPointSize(15);
-        LoginWayButton1->setFont(font4);
-        LoginWayButton1->setStyleSheet(QString::fromUtf8("QPushButton#LoginWayButton1{\n"
-"	background-color: rgba(0, 0, 0, 0);\n"
-"	color:rgba(85,98,112,255);\n"
-"	border:none;\n"
-"}\n"
-"QPushButto#LoginWayButton1:hover{\n"
-"	color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QPushButton#LoginWayButton1:pressed{\n"
-"	padding-left:5px;\n"
-"	padding-top:5px;\n"
-"	background-color:rgba(0, 0, 0, 0);\n"
-"}"));
+        label->setFont(font3);
+        label->setScaledContents(false);
+        label->setAlignment(Qt::AlignCenter);
+        CloseBtn = new QPushButton(widget_2);
+        CloseBtn->setObjectName(QString::fromUtf8("CloseBtn"));
+        CloseBtn->setGeometry(QRect(265, 5, 30, 25));
+        CloseBtn->setMaximumSize(QSize(30, 25));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/MainInterface/Image/MainInterface/x.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        CloseBtn->setIcon(icon1);
+        CloseBtn->setIconSize(QSize(30, 30));
 
-        horizontalLayout->addWidget(LoginWayButton1);
+        verticalLayout_4->addWidget(widget_2);
 
-        LoginWayButton2 = new QPushButton(horizontalLayoutWidget);
-        LoginWayButton2->setObjectName(QString::fromUtf8("LoginWayButton2"));
-        LoginWayButton2->setMaximumSize(QSize(30, 30));
-        LoginWayButton2->setFont(font4);
-        LoginWayButton2->setStyleSheet(QString::fromUtf8("QPushButton#LoginWayButton2{\n"
-"	background-color: rgba(0, 0, 0, 0);\n"
-"	color:rgba(85,98,112,255);\n"
-"	border:none;\n"
-"}\n"
-"QPushButto#LoginWayButto2n:hover{\n"
-"	color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QPushButton#LoginWayButton2:pressed{\n"
-"	padding-left:5px;\n"
-"	padding-top:5px;\n"
-"	background-color:rgba(0, 0, 0, 0);\n"
-"}"));
 
-        horizontalLayout->addWidget(LoginWayButton2);
+        verticalLayout_2->addWidget(widget);
 
-        LoginWayButton3 = new QPushButton(horizontalLayoutWidget);
-        LoginWayButton3->setObjectName(QString::fromUtf8("LoginWayButton3"));
-        LoginWayButton3->setMaximumSize(QSize(30, 30));
-        LoginWayButton3->setFont(font4);
-        LoginWayButton3->setStyleSheet(QString::fromUtf8("QPushButton#LoginWayButton3{\n"
-"	background-color: rgba(0, 0, 0, 0);\n"
-"	color:rgba(85,98,112,255);\n"
-"	border:none;\n"
-"}\n"
-"QPushButto#LoginWayButton3:hover{\n"
-"	color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QPushButton#LoginWayButton3:pressed{\n"
-"	padding-left:5px;\n"
-"	padding-top:5px;\n"
-"	background-color:rgba(0, 0, 0, 0);\n"
-"}"));
 
-        horizontalLayout->addWidget(LoginWayButton3);
+        verticalLayout->addWidget(Background);
 
-        LoginWayButton4 = new QPushButton(horizontalLayoutWidget);
-        LoginWayButton4->setObjectName(QString::fromUtf8("LoginWayButton4"));
-        LoginWayButton4->setMaximumSize(QSize(30, 30));
-        LoginWayButton4->setFont(font4);
-        LoginWayButton4->setStyleSheet(QString::fromUtf8("QPushButton#LoginWayButton4{\n"
-"	background-color: rgba(0, 0, 0, 0);\n"
-"	color:rgba(85,98,112,255);\n"
-"	border:none;\n"
-"}\n"
-"QPushButto#LoginWayButton4:hover{\n"
-"	color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QPushButton#LoginWayButton4:pressed{\n"
-"	padding-left:5px;\n"
-"	padding-top:5px;\n"
-"	background-color:rgba(0, 0, 0, 0);\n"
-"}"));
-
-        horizontalLayout->addWidget(LoginWayButton4);
-
-        Logolabel = new QLabel(widget);
-        Logolabel->setObjectName(QString::fromUtf8("Logolabel"));
-        Logolabel->setGeometry(QRect(120, 10, 50, 50));
-        Logolabel->setStyleSheet(QString::fromUtf8("border-image: url(:/LoginInterfare/Image/LoginInterfare/logo.png);\n"
-"border-radius:20px;"));
-        CloseButton = new QPushButton(widget);
-        CloseButton->setObjectName(QString::fromUtf8("CloseButton"));
-        CloseButton->setGeometry(QRect(252, 3, 30, 29));
-        CloseButton->setMaximumSize(QSize(30, 30));
-        QFont font5;
-        font5.setPointSize(20);
-        font5.setBold(true);
-        CloseButton->setFont(font5);
-        CloseButton->setStyleSheet(QString::fromUtf8("QPushButton#CloseButton{\n"
-"	background-color: rgba(0, 0, 0, 0);\n"
-"	color:rgba(85,98,112,255);\n"
-"	border:none;\n"
-"}\n"
-"QPushButto#CloseButton:hover{\n"
-"	color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QPushButton#CloseButton:pressed{\n"
-"	padding-left:5px;\n"
-"	padding-top:5px;\n"
-"	background-color:rgba(0, 0, 0, 0);\n"
-"}"));
-        Namelabel = new QLabel(widget);
-        Namelabel->setObjectName(QString::fromUtf8("Namelabel"));
-        Namelabel->setGeometry(QRect(10, 95, 280, 30));
-        QFont font6;
-        font6.setPointSize(19);
-        font6.setBold(true);
-        Namelabel->setFont(font6);
-        Namelabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-        Namelabel->setAlignment(Qt::AlignCenter);
 
         retranslateUi(LoginInterface);
 
@@ -254,21 +174,14 @@ public:
 
     void retranslateUi(QWidget *LoginInterface)
     {
-        LoginInterface->setWindowTitle(QCoreApplication::translate("LoginInterface", "LoginInterface", nullptr));
-        label->setText(QString());
-        label_2->setText(QString());
-        label_3->setText(QCoreApplication::translate("LoginInterface", "ShadowKnife System", nullptr));
-        UserEdit->setPlaceholderText(QCoreApplication::translate("LoginInterface", "User Name", nullptr));
-        PresswordEdit->setPlaceholderText(QCoreApplication::translate("LoginInterface", "Password", nullptr));
-        LoginButton->setText(QCoreApplication::translate("LoginInterface", "L o g   I n", nullptr));
-        Hintlabel->setText(QCoreApplication::translate("LoginInterface", "Forget your User Name or Passwword? ", nullptr));
-        LoginWayButton1->setText(QCoreApplication::translate("LoginInterface", "q", nullptr));
-        LoginWayButton2->setText(QCoreApplication::translate("LoginInterface", ")", nullptr));
-        LoginWayButton3->setText(QCoreApplication::translate("LoginInterface", "C", nullptr));
-        LoginWayButton4->setText(QCoreApplication::translate("LoginInterface", "E", nullptr));
-        Logolabel->setText(QString());
-        CloseButton->setText(QCoreApplication::translate("LoginInterface", "\342\225\263", nullptr));
-        Namelabel->setText(QCoreApplication::translate("LoginInterface", "ShadowKnife System", nullptr));
+        LoginInterface->setWindowTitle(QCoreApplication::translate("LoginInterface", "Login", nullptr));
+        PresswordEdit->setPlaceholderText(QCoreApplication::translate("LoginInterface", "\350\257\267\350\276\223\345\205\245\345\257\206\347\240\201", nullptr));
+        Text->setText(QCoreApplication::translate("LoginInterface", "\345\277\230\350\256\260\345\257\206\347\240\201\346\210\226\346\263\250\345\206\214\350\264\246\346\210\267\357\274\201", nullptr));
+        UserEdit->setPlaceholderText(QCoreApplication::translate("LoginInterface", "\350\257\267\350\276\223\345\205\245\347\224\250\346\210\267\345\220\215", nullptr));
+        LoginBtn->setText(QCoreApplication::translate("LoginInterface", "\347\231\273  \345\205\245", nullptr));
+        Logo->setText(QString());
+        label->setText(QCoreApplication::translate("LoginInterface", "ShadowKnife System", nullptr));
+        CloseBtn->setText(QString());
     } // retranslateUi
 
 };

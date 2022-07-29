@@ -1,13 +1,13 @@
 #ifndef MAININTERFACE_H
 #define MAININTERFACE_H
 
-#include <QWidget>
+#include <QMainWindow>
 
 namespace Ui {
 class MainInterface;
 }
 
-class MainInterface : public QWidget
+class MainInterface : public QMainWindow
 {
     Q_OBJECT
 

@@ -23,20 +23,20 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_LoginInterface_t {
     const uint offsetsAndSize[8];
-    char stringdata0[63];
+    char stringdata0[56];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_LoginInterface_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_LoginInterface_t qt_meta_stringdata_LoginInterface = {
     {
 QT_MOC_LITERAL(0, 14), // "LoginInterface"
-QT_MOC_LITERAL(15, 23), // "on_CloseButton_released"
-QT_MOC_LITERAL(39, 0), // ""
-QT_MOC_LITERAL(40, 22) // "on_LoginButton_clicked"
+QT_MOC_LITERAL(15, 19), // "on_CloseBtn_clicked"
+QT_MOC_LITERAL(35, 0), // ""
+QT_MOC_LITERAL(36, 19) // "on_LoginBtn_clicked"
 
     },
-    "LoginInterface\0on_CloseButton_released\0"
-    "\0on_LoginButton_clicked"
+    "LoginInterface\0on_CloseBtn_clicked\0\0"
+    "on_LoginBtn_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,8 +70,8 @@ void LoginInterface::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         auto *_t = static_cast<LoginInterface *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_CloseButton_released(); break;
-        case 1: _t->on_LoginButton_clicked(); break;
+        case 0: _t->on_CloseBtn_clicked(); break;
+        case 1: _t->on_LoginBtn_clicked(); break;
         default: ;
         }
     }

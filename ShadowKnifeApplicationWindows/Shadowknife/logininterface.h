@@ -16,9 +16,9 @@ public:
     ~LoginInterface();
 
 private slots:
-    void on_CloseButton_released();
+    void on_CloseBtn_clicked();
 
-    void on_LoginButton_clicked();
+    void on_LoginBtn_clicked();
 
 private:
     Ui::LoginInterface *ui;

@@ -9,15 +9,18 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    calculator.cpp \
     main.cpp \
     logininterface.cpp \
     maininterface.cpp
 
 HEADERS += \
+    calculator.h \
     logininterface.h \
     maininterface.h
 
 FORMS += \
+    calculator.ui \
     logininterface.ui \
     maininterface.ui
 
@@ -27,4 +30,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    Image.qrc
+    Image.qrc \
+    MainInterface.qrc

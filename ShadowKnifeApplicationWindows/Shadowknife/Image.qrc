@@ -1,13 +1,12 @@
 <RCC>
     <qresource prefix="/LoginInterfare">
         <file>Image/LoginInterfare/logo.png</file>
-        <file>Image/LoginInterfare/reduce.png</file>
-        <file>Image/LoginInterfare/close.png</file>
-        <file>Image/LoginInterfare/PresswordEdit.png</file>
-        <file>Image/LoginInterfare/UserEdit.png</file>
         <file>Image/LoginInterfare/1.jpg</file>
         <file>Image/LoginInterfare/2.jpg</file>
         <file>Image/LoginInterfare/3.jpg</file>
         <file>Image/LoginInterfare/4.jpg</file>
+    </qresource>
+    <qresource prefix="/Calculate">
+        <file>Image/Calculate/calculate.png</file>
     </qresource>
 </RCC>
