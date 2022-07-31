@@ -22,5 +22,6 @@ private slots:
 
 private:
     Ui::LoginInterface *ui;
+
 };
 #endif // LOGININTERFACE_H

@@ -133,7 +133,7 @@ public:
 "}"));
         Logo = new QLabel(widget_2);
         Logo->setObjectName(QString::fromUtf8("Logo"));
-        Logo->setGeometry(QRect(130, 20, 40, 40));
+        Logo->setGeometry(QRect(130, 25, 40, 40));
         Logo->setMinimumSize(QSize(40, 40));
         Logo->setMaximumSize(QSize(16777215, 0));
         Logo->setStyleSheet(QString::fromUtf8(""));

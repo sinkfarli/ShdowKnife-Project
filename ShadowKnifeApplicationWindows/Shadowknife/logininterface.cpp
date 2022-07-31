@@ -2,8 +2,13 @@
 #include "ui_logininterface.h"
 #include "maininterface.h"
 #include "calculator.h"
-#include "QMessageBox"
-#include <QDebug>
+#include <QMessageBox>
+
+#include <QKeyEvent>
+#include <QMouseEvent>
+#include <QRect>
+#include <QPoint>
+#include <QGridLayout>
 
 LoginInterface::LoginInterface(QWidget *parent)
     : QWidget(parent)
@@ -37,13 +42,13 @@ void LoginInterface::on_LoginBtn_clicked()
 
     this->close();
 
-    /*MainInterface *MI = new MainInterface;
+   MainInterface *MI = new MainInterface;
     MI->setGeometry(this->geometry());
-    MI->show();*/
+    MI->show();
 
-    Calculator *Cal = new Calculator;
+     /*Calculator *Cal = new Calculator;
     Cal->setGeometry(this->geometry());
-    Cal->show();
+    Cal->show();*/
     if(UsreName == "root" && Pressword == "1234")
     {
 
@@ -56,4 +61,6 @@ void LoginInterface::on_LoginBtn_clicked()
 
     }
 }
+
+
 
