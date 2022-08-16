@@ -16,7 +16,6 @@ public:
     ~Calculator();
 
 private slots:
-    void on_CloseBut_clicked();
 
 private:
     Ui::Calculator *ui;

@@ -42,13 +42,10 @@ void LoginInterface::on_LoginBtn_clicked()
 
     this->close();
 
-   MainInterface *MI = new MainInterface;
+    MainInterface *MI = new MainInterface;
     MI->setGeometry(this->geometry());
     MI->show();
 
-     /*Calculator *Cal = new Calculator;
-    Cal->setGeometry(this->geometry());
-    Cal->show();*/
     if(UsreName == "root" && Pressword == "1234")
     {
 
